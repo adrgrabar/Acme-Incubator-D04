@@ -313,5 +313,101 @@
 		<property name="budget" value="EUR 300" />
 		<property name="investmentRound" ref="investmentRound02" />
 	</bean>
+	
+	<bean name="investor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="investor1" />
+		<property name="password" value="investor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Miguel" />
+				<property name="surname" value="Hernandez" />
+				<property name="email" value="Miguel@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="investor1Investor" />
+				<ref bean="investor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="investor1Investor" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Name1" />
+		<property name="activitySector" value="Sector1" />
+		<property name="profile" value="Profile1" />
+		<property name="userAccount" ref="investor1UserAccount" />
+	</bean>
+
+	<bean name="investor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="investor1UserAccount" />
+	</bean>
+	
+	<bean name="investor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="investor2" />
+		<property name="password" value="investor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Diego" />
+				<property name="surname" value="Garcia" />
+				<property name="email" value="Diego@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="investor2Investor" />
+				<ref bean="investor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="investor2Investor" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Name2" />
+		<property name="activitySector" value="Sector2" />
+		<property name="profile" value="Profile2" />
+		<property name="userAccount" ref="investor2UserAccount" />
+	</bean>
+
+	<bean name="investor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="investor2UserAccount" />
+	</bean>
+
+	<bean id="application01" class="acme.entities.applications.Application">
+		<property name="ticker" value="SEC-20-000000" />
+		<property name="date" value="2020/01/20 10:13" />
+		<property name="statement" value="Statement 1" />
+		<property name="offer" value="EUR 100" />
+		<property name="investmentRound" ref="investmentRound01" />
+		<property name="investor" ref="investor1Investor" />
+	</bean>
+
+	<bean id="application02" class="acme.entities.applications.Application">
+		<property name="ticker" value="SEC-20-000001" />
+		<property name="date" value="2020/01/20 15:13" />
+		<property name="statement" value="Statement 2" />
+		<property name="offer" value="EUR 50" />
+		<property name="investmentRound" ref="investmentRound01" />
+		<property name="investor" ref="investor2Investor" />
+	</bean>
+
+	<bean id="application03" class="acme.entities.applications.Application">
+		<property name="ticker" value="SEC-20-000002" />
+		<property name="date" value="2020/03/20 10:13" />
+		<property name="statement" value="Statement 3" />
+		<property name="offer" value="EUR 300" />
+		<property name="investmentRound" ref="investmentRound02" />
+		<property name="investor" ref="investor1Investor" />
+	</bean>
+
+	<bean id="application04" class="acme.entities.applications.Application">
+		<property name="ticker" value="SEC-20-000003" />
+		<property name="date" value="2020/03/21 10:13" />
+		<property name="statement" value="Statement 4" />
+		<property name="offer" value="EUR 800" />
+		<property name="investmentRound" ref="investmentRound02" />
+		<property name="investor" ref="investor2Investor" />
+	</bean>
 
 </beans>

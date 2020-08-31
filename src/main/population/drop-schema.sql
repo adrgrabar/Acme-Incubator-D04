@@ -11,6 +11,14 @@
        drop 
        foreign key FK_6lnbc6fo3om54vugoh8icg78m;
 
+    alter table `application` 
+       drop 
+       foreign key `FKk5ibe41quxsif8im882xv4afo`;
+
+    alter table `application` 
+       drop 
+       foreign key `FKl4fp0cd8c008ma79n6w58xhk9`;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;

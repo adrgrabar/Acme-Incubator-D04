@@ -67,15 +67,21 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 
-# master.menu.consumer ##########################################################
+# master.menu.consumer #########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
-# master.menu.consumer ##########################################################
+# master.menu.entrepreneurs ###################################################
 
 master.menu.entrepreneur = Empresario
 master.menu.entrepreneur.investmentRound = Mis rondas de inversión
+master.menu.entrepreneur.application = Lista de aplicaciones a mis rondas de inversión
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Inversor
+master.menu.investor.application = Mis aplicaciones
 
 # master.menu.user-account ####################################################
 
