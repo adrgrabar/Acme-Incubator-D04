@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+	<bean id="notice01" class="acme.entities.notices.Notice">
+		<property name="title" value="Sample notice" />
+		<property name="date" value="2010/12/17 00:00" />
+		<property name="picture" value="https://images.unsplash.com/photo-1542044896530-05d85be9b11a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;w=1000&amp;q=80" />
+		<property name="deadline" value="2030/12/17 00:00" />
+		<property name="body" value="This is the first notice" />
+	</bean>
+	
+	<bean id="notice02" class="acme.entities.notices.Notice">
+		<property name="title" value="Sample notice 2" />
+		<property name="date" value="2012/12/17 00:00" />
+		<property name="picture" value="https://images.unsplash.com/photo-1542044896530-05d85be9b11a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;w=1000&amp;q=80" />
+		<property name="deadline" value="2019/12/17 00:00" />
+		<property name="body" value="This is the second notice" />
+	</bean>
+	
+	<bean id="notice03" class="acme.entities.notices.Notice">
+		<property name="title" value="Sample notice 3" />
+		<property name="date" value="2015/12/17 00:00" />
+		<property name="picture" value="https://images.unsplash.com/photo-1542044896530-05d85be9b11a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;w=1000&amp;q=80" />
+		<property name="deadline" value="2030/12/17 00:00" />
+		<property name="body" value="This is the third notice" />
+		<property name="links" value="www.google.com" />
+	</bean>
+	
+	<bean id="toolRecord01" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Sample tool record 1" />
+		<property name="activitySector" value="Agriculture" />
+		<property name="stars" value="2" />
+		<property name="description" value="Sample tool" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="inventor" value="Inventor 1" />
+		<property name="openSource" value="False" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="toolRecord02" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Sample tool record 2" />
+		<property name="activitySector" value="Informatics" />
+		<property name="stars" value="5" />
+		<property name="inventor" value="Inventor 1" />
+		<property name="description" value="Sample tool" />
+		<property name="openSource" value="True" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="toolRecord03" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Sample tool record 3" />
+		<property name="activitySector" value="Agriculture" />
+		<property name="stars" value="5" />
+		<property name="inventor" value="Inventor 2" />
+		<property name="openSource" value="True" />
+		<property name="description" value="Sample tool" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="technologyRecord01" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Sample technology record 1" />
+		<property name="activitySector" value="Agriculture" />
+		<property name="stars" value="2" />
+		<property name="openSource" value="True" />
+		<property name="description" value="Sample technology" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="inventor" value="Inventor 1" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="technologyRecord02" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Sample technology record 2" />
+		<property name="activitySector" value="Informatics" />
+		<property name="stars" value="5" />
+		<property name="openSource" value="True" />
+		<property name="inventor" value="Inventor 1" />
+		<property name="description" value="Sample technology" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="technologyRecord03" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Sample technology record 3" />
+		<property name="activitySector" value="Agriculture" />
+		<property name="stars" value="5" />
+		<property name="openSource" value="False" />
+		<property name="inventor" value="Inventor 2" />
+		<property name="description" value="Sample technology" />
+		<property name="webSite" value="http://www.google.com" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="inquiry01" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Sample inquiry" />
+		<property name="description" value="Sample inquiry" />
+		<property name="date" value="2010/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 0" />
+		<property name="moneyEnd" value="EUR 200" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="inquiry02" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Sample inquiry 02" />
+		<property name="description" value="Sample inquiry 02" />
+		<property name="date" value="2015/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 3" />
+		<property name="moneyEnd" value="EUR 300" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="inquiry03" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Sample inquiry 03" />
+		<property name="description" value="Sample inquiry 03" />
+		<property name="date" value="2017/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 80" />
+		<property name="moneyEnd" value="EUR 100" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="overture01" class="acme.entities.overtures.Overture">
+		<property name="title" value="Sample overture" />
+		<property name="description" value="Sample overture" />
+		<property name="date" value="2010/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 0" />
+		<property name="moneyEnd" value="EUR 200" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="overture02" class="acme.entities.overtures.Overture">
+		<property name="title" value="Sample overture 02" />
+		<property name="description" value="Sample overture 02" />
+		<property name="date" value="2015/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 3" />
+		<property name="moneyEnd" value="EUR 300" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="overture03" class="acme.entities.overtures.Overture">
+		<property name="title" value="Sample overture 03" />
+		<property name="description" value="Sample overture 03" />
+		<property name="date" value="2017/12/17 00:00" />
+		<property name="deadline" value="2035/12/17 00:00" />
+		<property name="moneyStart" value="EUR 80" />
+		<property name="moneyEnd" value="EUR 100" />
+		<property name="email" value="email@email.com" />
+	</bean>
+	
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Sample challenge 01" />
+		<property name="deadline" value="2020/10/10 19:10" />
+		<property name="description" value="This is the description of the first challenge" />
+		<property name="expertGoal" value="This is the first expert goal" />
+		<property name="averageGoal" value="This is the first average goal" />
+		<property name="rookieGoal" value="This is the first rookie goal" />
+		<property name="expertReward" value="EUR 1000" />
+		<property name="averageReward" value="EUR 700" />
+		<property name="rookieReward" value="EUR 300" />
+	</bean>
+
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Sample challenge 02" />
+		<property name="deadline" value="2025/5/12 13:10" />
+		<property name="description" value="This is the description of the second challenge" />
+		<property name="expertGoal" value="This is the second expert goal" />
+		<property name="averageGoal" value="This is the second average goal" />
+		<property name="rookieGoal" value="This is the second rookie goal" />
+		<property name="expertReward" value="EUR 1000" />
+		<property name="averageReward" value="EUR 700" />
+		<property name="rookieReward" value="EUR 300" />
+	</bean>
+
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Sample challenge 03" />
+		<property name="deadline" value="2022/12/10 10:13" />
+		<property name="description" value="This is the description of the third challenge" />
+		<property name="expertGoal" value="This is the third expert goal" />
+		<property name="averageGoal" value="This is the third average goal" />
+		<property name="rookieGoal" value="This is the third rookie goal" />
+		<property name="expertReward" value="EUR 1000" />
+		<property name="averageReward" value="EUR 700" />
+		<property name="rookieReward" value="EUR 300" />
+	</bean>
+
+</beans>
