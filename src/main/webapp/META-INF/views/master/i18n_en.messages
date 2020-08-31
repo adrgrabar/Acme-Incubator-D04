@@ -42,6 +42,7 @@ master.menu.authenticated.technologyRecord = Technologies
 master.menu.authenticated.inquiry = Inquiries
 master.menu.authenticated.overture = Overtures
 master.menu.authenticated.challenge = Challenges
+master.menu.authenticated.investmentRound = Investment rounds
 
 # master.menu.administrator ###################################################
 
@@ -70,6 +71,11 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.entrepreneur = Entrepreneur
+master.menu.entrepreneur.investmentRound = My investment rounds
 
 # master.menu.user-account ####################################################
 

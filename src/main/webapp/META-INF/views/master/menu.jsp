@@ -32,6 +32,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.inquiry" action="/authenticated/inquiry/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.overture" action="/authenticated/overture/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.investmentRound" action="/authenticated/investment-round/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -52,8 +53,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
+			<acme:menu-suboption code="master.menu.entrepreneur.investmentRound" action="/entrepreneur/investment-round/list_mine"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">

@@ -203,5 +203,115 @@
 		<property name="averageReward" value="EUR 700" />
 		<property name="rookieReward" value="EUR 300" />
 	</bean>
+	
+	<bean name="entrepreneur1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="entrepreneur1" />
+		<property name="password" value="entrepreneur1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Juan" />
+				<property name="surname" value="Rodriguez" />
+				<property name="email" value="Juan@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="entrepreneur1Entrepreneur" />
+				<ref bean="entrepreneur1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="entrepreneur1Entrepreneur" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Name1" />
+		<property name="activitySector" value="Sector1" />
+		<property name="qualificationRecord" value="Qualification1" />
+		<property name="skillRecord" value="Skill1" />
+		<property name="userAccount" ref="entrepreneur1UserAccount" />
+	</bean>
+
+	<bean name="entrepreneur1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="entrepreneur1UserAccount" />
+	</bean>
+	
+	<bean name="entrepreneur2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="entrepreneur2" />
+		<property name="password" value="entrepreneur2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Carlos" />
+				<property name="surname" value="Dominguez" />
+				<property name="email" value="Carlos@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="entrepreneur2Entrepreneur" />
+				<ref bean="entrepreneur2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="entrepreneur2Entrepreneur" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Name2" />
+		<property name="activitySector" value="Sector2" />
+		<property name="qualificationRecord" value="Qualification2" />
+		<property name="skillRecord" value="Skill2" />
+		<property name="userAccount" ref="entrepreneur2UserAccount" />
+	</bean>
+
+	<bean name="entrepreneur2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="entrepreneur2UserAccount" />
+	</bean>
+
+	<bean id="investmentRound01" class="acme.entities.investmentRounds.InvestmentRound">
+		<property name="ticker" value="SEC-19-000000" />
+		<property name="date" value="2019/12/10 10:13" />
+		<property name="type" value="SERIES-A" />
+		<property name="title" value="Investment round 1" />
+		<property name="description" value="Investment round 1" />
+		<property name="moneyAmount" value="EUR 100" />
+		<property name="moreInformation" value="http://www.google.com" />
+		<property name="published" value="true" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
+
+	<bean id="investmentRound02" class="acme.entities.investmentRounds.InvestmentRound">
+		<property name="ticker" value="SEC-19-000001" />
+		<property name="date" value="2019/12/30 10:13" />
+		<property name="type" value="SERIES-A" />
+		<property name="title" value="Investment round 2" />
+		<property name="description" value="Investment round 2" />
+		<property name="moneyAmount" value="EUR 300" />
+		<property name="moreInformation" value="http://www.google.com" />
+		<property name="published" value="true" />
+		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
+	</bean>
+
+	<bean id="activity01" class="acme.entities.investmentRounds.Activity">
+		<property name="title" value="Activity 1 from IR 1" />
+		<property name="startDate" value="2010/12/10 10:13" />
+		<property name="endDate" value="2025/12/30 10:13" />
+		<property name="budget" value="EUR 30" />
+		<property name="investmentRound" ref="investmentRound01" />
+	</bean>
+
+	<bean id="activity02" class="acme.entities.investmentRounds.Activity">
+		<property name="title" value="Activity 2 from IR 1" />
+		<property name="startDate" value="2015/12/30 10:13" />
+		<property name="endDate" value="2027/12/30 10:13" />
+		<property name="budget" value="EUR 70" />
+		<property name="investmentRound" ref="investmentRound01" />
+	</bean>
+
+	<bean id="activity03" class="acme.entities.investmentRounds.Activity">
+		<property name="title" value="Activity 3 from IR 2" />
+		<property name="startDate" value="2017/12/30 10:13" />
+		<property name="endDate" value="2028/12/30 10:13" />
+		<property name="budget" value="EUR 300" />
+		<property name="investmentRound" ref="investmentRound02" />
+	</bean>
 
 </beans>
