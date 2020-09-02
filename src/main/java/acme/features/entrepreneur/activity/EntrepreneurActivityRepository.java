@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.investmentRounds.Activity;
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -28,5 +29,8 @@ public interface EntrepreneurActivityRepository extends AbstractRepository {
 
 	@Query("select a from Activity a where a.id=?1")
 	Activity findOneById(Integer id);
+
+	@Query("select ir from InvestmentRound ir where ir.id=?1")
+	InvestmentRound findOneIRById(Integer irId);
 
 }
